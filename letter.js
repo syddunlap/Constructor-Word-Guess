@@ -1,23 +1,19 @@
-var userGuess = process.argv[2];
-
 function Letter(character) {
     this.character = character;
     this.guessed = false;
-    this.Correct = function() {
+    this.placeholder = function() {
         if (this.guessed === true) {
-            console.log("You're correct, the letter was: " + this.character);
+            return this.character;
         } else {
-            console.log("Guess what letter I'm thinking of: " + "_");
+            return "_";
         }
     }
-    this.Guess = function() {
-        if (userGuess === this.character) {
+    this.Guess = function(guess) {
+        if (userGuess.toLowerCase() === this.character.toLowerCase()) {
             this.guessed = true;
-            this.Correct();
+            this.placeholder();
+        } else {
+            this.placeholder();
         }
     }
 };
-
-var a = new Letter("a");
-
-a.Guess();
