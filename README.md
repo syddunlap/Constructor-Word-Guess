@@ -14,6 +14,5 @@ The category for the game is different types of coffee.
 
 Further functionality of this game would include options for a user to choose from different categories at the beginning of the game. 
 
-## Application
-Click on the image to watch a video of the application.
-[![Image of Node Application](http://img.youtube.com/vi/ihULJsLRa14/0.jpg)](http://www.youtube.com/watch?v=ihULJsLRa14 "Constructor Word Guess")
+## Click the Image to Watch a Video of the Application
+*[Link to Video](https://www.youtube.com/watch?v=ihULJsLRa14&feature=youtu.be)
