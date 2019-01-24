@@ -14,5 +14,5 @@ The category for the game is different types of coffee.
 
 Further functionality of this game would include options for a user to choose from different categories at the beginning of the game. 
 
-## Click the Image to Watch a Video of the Application
+## Video of Application Functioning
 *[Link to Video](https://www.youtube.com/watch?v=ihULJsLRa14&feature=youtu.be)
