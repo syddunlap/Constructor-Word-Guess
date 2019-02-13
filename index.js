@@ -1,12 +1,12 @@
 // Import Word constructor
-var Word = require("./word.js");
-var inquirer = require("inquirer");
+const Word = require("./word.js");
+const inquirer = require("inquirer");
 
 // Declaration of global variables.
 let alreadyGuessed = false;				
 let currentWord;								
 let lives = 10;						
-let guessedLetters = [];	
+const guessedLetters = [];	
 let guessedRight = false;					
 let userGuess;								
 let won = false;							
@@ -28,7 +28,7 @@ function startGame() {
 
 	// A new array for the word to be displayed as underscores and spaces
 	let blankWord = [];
-	for (var i = 0; i < currentWord.letterArray.length; i++) {
+	for (let i = 0; i < currentWord.letterArray.length; i++) {
 		if (currentWord.letterArray[i] == " ") {
 			blankWord.push(" ");
 		} else {
@@ -52,7 +52,7 @@ function inquire() {
 		console.log("\x1b[37m", "\nYour guess: " + userGuess);
 
 		// Runs through array of guessed Letters to see if it's already there.
-		for (var i = 0; i < guessedLetters.length; i++) {
+		for (let i = 0; i < guessedLetters.length; i++) {
 			if (userGuess == guessedLetters[i]) {
 				console.log("\x1b[33m", "Try again! You already guessed this!");
 				alreadyGuessed = true;
@@ -80,7 +80,7 @@ function inquire() {
 		console.log("\x1b[33m", "Guesses left: " + lives + " \n");
 
 		// For loop to see if all of the letters have been guessed for the fullWord to be true.
-		for (var i = 0; i < currentWord.letterArray.length; i++) {
+		for (let i = 0; i < currentWord.letterArray.length; i++) {
 			if (currentWord.currentGuess[i] != currentWord.letterArray[i]) {
 				fullWord = false;
 			}

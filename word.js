@@ -1,5 +1,5 @@
 // Import Letter constructor
-var Letter = require("./letter.js");
+const Letter = require("./letter.js");
 
 // Constructor to hold the word and splits the word into a letter Array
 function Word(word) {
@@ -12,7 +12,7 @@ function Word(word) {
 	this.flag = false;
 	this.makeWord = function() {
 		// For loop through Letter constructor for each letter of the word
-		for (var i = 0; i < this.letterArray.length; i++) {
+		for (let i = 0; i < this.letterArray.length; i++) {
 			this.letterObjectArray[i] = new Letter(this.letterArray[i]);
 		}
 	};
@@ -20,7 +20,7 @@ function Word(word) {
 		let correctGuess = false;
 
 		// For loop to check if the user's guess is correct for any of the letters in the array.
-		for (var i = 0; i < this.letterArray.length; i++) {
+		for (let i = 0; i < this.letterArray.length; i++) {
             correctGuess = this.letterObjectArray[i].checkGuess(userGuess);
             // Prints updated word
 			this.currentGuess[i] = this.letterObjectArray[i].returnLetter();
